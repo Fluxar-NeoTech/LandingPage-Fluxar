@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NeoTech</title>
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/estiloPaginaPrincipal.css" />
+    <!-- Estilo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<!-- BODY cod:body -->
+
+<body>
+    <!-- HEADER cod:header -->
+    <header class="header">
+        <!-- DIV HEADER cod:divHeader-->
+        <div class="container header__inner">
+            <a class="brand" href="/" aria-label="Página inicial">
+                <img class="brand__logo" src="/assets/images/Logos/NeoTech.png" alt="NeoTech" width="140" height="40" />
+            </a>
+
+            <!-- MENU EM TELAS GRANDES cod:menuPadrão -->
+            <!-- MENU EM TELAS GRANDES -->
+            <nav class="nav nav--desktop" aria-label="Principal">
+                <ul class="nav__list">
+                    <li class="nav__item activeNav" id="inicio">
+                        <a href="#inicio">Início</a>
+                    </li>
+                    <li class="nav__item" id="planos">
+                        <a href="planos.html">Planos</a>
+                    </li>
+
+                    <!-- NEO TECH COM SUBMENU -->
+                    <li class="nav__item" id="neotech">
+                        <a class="titulo" href="#">NeoTech</a>
+                        <div class="neoTechSelection">
+                            <div class="neoTech--submenu">
+                                <div class="neoTech--descricao">
+                                    <p>Tecnologia para simplificar processos e reduzir custos.</p>
+                                </div>
+                                <div class="neoTech--links">
+                                    <ul>
+                                        <li>
+                                            <a href="#Sobre">Sobre</a>
+                                            <p>Oq é a NeoTech</p>
+                                        </li>
+                                        <li>
+                                            <a href="#Historia">História</a>
+                                            <p>Como Surgiu a NeoTech</p>
+                                        </li>
+                                        <li>
+                                            <a href="#Missao">Missão</a>
+                                            <p>Nosso Objetivo</p>
+                                        </li>
+                                        <li>
+                                            <a href="#Valores">Valores</a>
+                                            <p>O que acreditamos</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="neoTech--footer">
+                                <a href="">Contate-nos</a>
+                                <a href="">Entrar</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- FLUXAR -->
+                    <li class="nav__item" id="fluxar">
+                        <a href="#">Fluxar</a>
+                        <div class="FluxarSelection">
+                            <p>Aqui você pode colocar as infos do Fluxar.</p>
+                        </div>
+                    </li>
+
+                    <!-- SOBRE NÓS -->
+                    <li class="nav__item" id="sobreNos">
+                        <a href="#">Sobre Nós</a>
+                        <div class="sobreNosSelection">
+                            <p>Aqui vai conteúdo do Sobre Nós.</p>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- LINK BOTÃO -->
+            <a class="btn--cadastro" href="cadastro.html">Cadastre-se</a>
+            <a class="btn btn--pill btn--gradient btn--entrar" href="entrar.html">Entrar</a>
+
+            <!-- NAV/BOTÃO MENU TRACINHOS HAMBURGUER cod:navMenu  -->
+            <nav class="nav" aria-label="Principal">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="sidePanel"
+                    aria-label="Abrir menu">
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                    <span class="nav__bar"></span>
+                </button>
+            </nav>
+            <!-- FIM NAVE -->
+        </div>
+    </header>
+    <!-- FIM HEADER -->
+
+    <!-- Painel lateral cod:menuLateral-->
+    <aside class="side-panel" id="sidePanel" aria-hidden="true">
+        <!-- LISTA DOS ITENS DO MENU cod:listaMenu -->
+        <ul class="side-panel__list">
+            <!-- Início (link simples) cod:inicioMenu -->
+            <li class="drawer-item" data-section="inicio">
+                <a href="/" class="drawer-link">Início</a>
+            </li>
+
+            <!-- Planos  cod:planosMenu -->
+            <li class="drawer-item" data-section="planos">
+                <a href="planos.html" class="drawer-link">Planos</a>
+            </li>
+
+            <!-- NeoTech/INFO cod:neoTechMenu -->
+            <li class="drawer-item has-children" data-section="neotech">
+                <!-- botão que mostra coisas da neotech  -->
+                <button class="drawer-link" type="button">
+                    <span>NeoTech</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24">
+                        <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <!-- Fim Do Botão -->
+
+                <!-- submenu da NEOTECH  cod:subMenuNeotech-->
+                <div class="submenu">
+                    <p class="submenu__blurb">Tecnologia para simplificar processos e reduzir custos.</p>
+                    <a class="submenu__link" href="#Sobre">Sobre</a>
+                    <a class="submenu__link" href="#Missao">Missão</a>
+                    <a class="submenu__link"
+                        href="mailto:suporte2025.neo.tech@gmail.com?subject=Dúvida%20Rápida&body=Gostaria%20de%20saber%20mais%20sobre%20o%20produto">Contato</a>
+                </div>
+                <!-- FIM submenu -->
+            </li>
+
+            <!-- Fluxar (expansível com mini-info) cod:fluxarMenu-->
+            <li class="drawer-item has-children" data-section="fluxar">
+                <!-- Botão que mostra coisas do fluxar-->
+                <button class="drawer-link" type="button">
+                    <span>Fluxar</span>
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24">
+                        <path d="M8 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <!-- Fim do botão -->
+
+                <!-- submenu da fluxar cod:fluxarSubMenu-->
+                <div class="submenu">
+                    <p class="submenu__blurb">App de gestão de estoque: rápido, simples e integrado.</p>
+                    <a class="submenu__link" href="#funcionalidades">Funcionalidades</a>
+                    <a class="submenu__link" href="/fluxar/cases">Cases</a>
+                    <a class="submenu__link" href="/fluxar/download">Download</a>
+                </div>
+                <!-- fim submenu -->
+            </li>
+
+            <!-- Sobre nós (link simples) -->
+            <li class="drawer-item" data-section="sobre">
+                <a href="/sobre" class="drawer-link">Sobre nós</a>
+            </li>
+
+        </ul>
+        <!-- FIM DA LISTA -->
+
+        <!-- rodapé do menu com LINK -->
+        <div class="side-panel__footer">
+            <a class="btn btn--pill btn--gradient" href="/entrar">Entrar</a>
+        </div>
+        <!-- FIM rodapé -->
+    </aside>
+    <!-- Fim do Painel -->
+
+    <!-- backdrop -->
+    <div class="backdrop" id="backdrop" hidden></div>
+
+    <!-- main cod:main -->
+    <main>
+        <!-- HERO/section PRINCIPAL cod:sectionHero -->
+        <section class="hero">
+            <!-- div conteudo principal do hero cod:divHero -->
+            <div class="container hero__grid">
+                <div class="img--hero">
+                    <img src="/assets/images/carinha sorrindo chat gpt 1.png" alt="">
+                </div>
+                <div class="hero__text">
+                    <h1 class="hero__title reveal" data-reveal="up" data-delay="0">
+                        Leve sua gestão de estoques ao próximo nível
+                    </h1>
+
+                    <p class="hero__subtitle reveal" data-reveal="up" data-delay="120">
+                        A NeoTech simplifica processos, conecta unidades e garante mais eficiência...
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#year" class="btn btn--pill btn--gradient">Comece agora</a>
+                        <div class="rating" aria-label="Avaliação 4.8 de 5">
+                            <span class="rating__score">4.8</span>
+                            <span class="rating__stars" aria-hidden="true">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="device">
+                    <!-- Carrossel com fade cod:imgComFADE-->
+                    <figure class="device__frame">
+                        <img class="device__img is-active" id="fluxarImg" src="/assets/images/ImagemTransmutando1.png"
+                            alt="App Fluxar – tela 1">
+                    </figure>
+                </div>
+                
+            </div>
+            <!-- fim da div -->
+        </section>
+        <!-- fim da section -->
+
+        <!-- SOBRE A NEOTECH cod:parteNeotech-->
+
+        <!-- Inicio Section sobre cod:sobreNeotech-->
+        <section class="about">
+            <!-- Inicio div principal/container -->
+            <div class="container">
+                <ol class="about__list">
+                    <!-- Item sobre nós cod:sobreNósNeoTech-->
+                    <li class="about__item reveal" id="Sobre" data-reveal="left" data-delay="0">
+                        <img class="about__icon" src="/assets/icons/Representação companhia 1.png" alt=""
+                            aria-hidden="true">
+                        <h2 class="about__title">Sobre nós</h2>
+                        <p class="about__text">A NeoTech é uma empresa dedicada à otimização de processos industriais e
+                            comerciais por meio de Inovação</p>
+                        <p class="about__text">Fundada com o propósito de integrar tecnologia e praticidade, buscamos
+                            tornar o futuro mais acessível no presente.</p>
+                    </li>
+
+                    <!-- Item missão cod:missaoNeotech-->
+                    <li class="about__item reveal" id="Missao" data-reveal="left" data-delay="80">
+                        <img class="about__icon" src="/assets/icons/missao.png" alt="" aria-hidden="true">
+                        <h2 class="about__title">Nossa missão</h2>
+                        <p class="about__text">Em um mercado competitivo e sustentável, é essencial buscar melhorias
+                            contínuas no processo produtivo para reduzir custos e vencer a concorrência.</p>
+                        <p class="about__text">Queremos auxiliar empresas de qualquer porte nessa jornada de otimização
+                            e evolução operacional.</p>
+                    </li>
+
+                    <!-- Item história cod:historiaNeotech -->
+                    <li class="about__item reveal" id="Historia" data-reveal="left" data-delay="160">
+                        <img class="about__icon" src="/assets/icons/historia.png" alt="" aria-hidden="true">
+                        <h2 class="about__title">História</h2>
+                        <p class="about__text">A NeoTech nasceu no início de 2025 em um projeto interdisciplinar. A
+                            partir de pesquisas de campo, identificamos falhas na gestão de estoques e criamos o Fluxar
+                            para resolvê-las.</p>
+                    </li>
+
+                    <!-- Item valores cod:valoresNeotech -->
+                    <li class="about__item about__item--values reveal" id="Valores" data-reveal="right"
+                        data-delay="240">
+                        <img class="about__dna" src="/assets/icons/dna.png" alt="" aria-hidden="true">
+                        <h2 class="about__title">Nossos valores</h2>
+                        <ul class="values">
+                            <li class="values__item reveal" data-reveal="right" data-delay="0"><img
+                                    src="/assets/icons/duasSetas.png" alt="" aria-hidden="true"><span>Respeito</span></li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="80"><img
+                                    src="/assets/icons/Outra seta.png" alt="" aria-hidden="true"><span>Inovação</span></li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="160"><img
+                                    src="/assets/icons/duasSetas.png" alt="" aria-hidden="true"><span>Ética</span></li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="240"><img
+                                    src="/assets/icons/Outra seta.png" alt="" aria-hidden="true"><span>Colaboração</span>
+                            </li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="320"><img
+                                    src="/assets/icons/duasSetas.png" alt="" aria-hidden="true"><span>Excelência</span>
+                            </li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="400"><img
+                                    src="/assets/icons/Outra seta.png" alt="" aria-hidden="true"><span>Transparência</span>
+                            </li>
+                            <li class="values__item reveal" data-reveal="right" data-delay="480"><img
+                                    src="/assets/icons/duasSetas.png" alt="" aria-hidden="true"><span>Foco no
+                                    cliente</span></li>
+                        </ul>
+                    </li>
+                    <!-- fim dos itens -->
+                </ol>
+                <!-- fim da lista -->
+            </div>
+            <!-- fim da div -->
+        </section>
+        <!-- fim da section -->
+
+
+        <!-- BLOCO FLUXAR cod:parteFluxar -->
+        <!-- section produto cod:sectionFluxar -->
+        <section class="product">
+            <h1 class="Titulo-Product reveal" data-reveal="up">A revolução da gestão de estoque já existe</h1>
+            <!-- div principal da fluxar cod:animaçãoFluxar -->
+            <div class="container product__card">
+                <canvas class="product__canvas" aria-hidden="true"></canvas>
+                <p class="TituloProduto">A Um Clique De transformar Seu Estoque</p>
+                <div class="product__text">
+                    <h3 class="product__title">Otimize seu fluxo de estoque e destrave seu processo produtivo</h3>
+                    <p class="product__desc">
+                        Aplicativo ideal para companhias que querem controle maior do estoque, com simplicidade e
+                        qualidade.
+                    </p>
+                    <a href="#" class="btn btn--pill">Comece seu teste grátis</a>
+                </div>
+            </div>
+            <!-- fim da div -->
+
+            <!-- começo das Divs de Problem, Solução e Funcionalidades -->
+
+            <!-- Problemas cod:infoProblemasDasEmpresas-->
+            <div class="container product__info">
+                <div class="info-card problema reveal" data-reveal="up" data-delay="0">
+                    <div class="info-card__icon">
+                        <img src="/assets/icons/alert-triangle.png" alt="" aria-hidden="true">
+                    </div>
+                    <h3 class="info-card__title">
+                        <span class="pill pill--danger">Problema</span>
+                        O problema que ele soluciona
+                    </h3>
+                    <p>
+                        Estoque em excesso é dinheiro parado. Produtos vencidos e espaço ocupado prejudicam o fluxo e a
+                        gestão. Sem
+                        controle, o problema cresce e pesa no caixa da empresa. Esse desperdício é invisível, mas afeta
+                        diretamente o
+                        resultado.
+                    </p>
+                </div>
+                <!-- FIM div problemas -->
+
+                <!-- Solução cod:infoSoluçãoDasEmpresas -->
+                <div class="info-card solucao reveal" data-reveal="up" data-delay="120">
+                    <div class="info-card__icon">
+                        <img src="/assets/icons/Representação companhia 1.png" alt="" aria-hidden="true">
+                    </div>
+                    <h3 class="info-card__title">
+                        <span class="pill pill--success">Solução</span>
+                        Como o Fluxar ajuda nesse problema?
+                    </h3>
+                    <p>
+                        O Fluxar monitora seu estoque em tempo real, evitando excessos e perdas. Com alertas automáticos
+                        e dados
+                        precisos, você controla entradas e saídas. Assim, o estoque fica na medida certa, melhora o
+                        fluxo de caixa e
+                        reduz os custos.
+                    </p>
+                    <p>O Fluxar transforma dados em eficiência e economia para sua empresa.</p>
+                </div>
+                <!-- FIM div solução -->
+
+                <!-- Funcionalidades cod:funcDoFluxar-->
+                <div class="features__viewport" id="funcionalidades">
+                    <!-- Botão anterior -->
+                    <button class="features__nav features__nav--prev" aria-label="Funcionalidade anterior">‹</button>
+
+                    <!-- Conteúdo do card -->
+                    <div class="funcionalidades reveal" data-reveal="up" data-delay="240">
+                        <div class="info-card__icon">
+                            <img src="/assets/icons/historia.png" alt="" aria-hidden="true">
+                        </div>
+                        <h3 class="info-card__title">
+                            <span class="pill">Funcionalidades</span> O que você ganha na prática
+                        </h3>
+
+                        <!-- Área de troca de funcionalidades -->
+                        <div class="features">
+                            <div class="feature" data-index="0">
+                                <h4>Alertas Inteligentes</h4>
+                                <p>Receba notificações automáticas quando o estoque atingir níveis mínimos ou quando
+                                    produtos vencerem.</p>
+                            </div>
+
+                            <div class="feature" data-index="1">
+                                <h4>Dashboard em Tempo Real</h4>
+                                <p>Visualize gráficos e métricas atualizadas a cada movimento: entradas, saídas e
+                                    tendências de consumo.</p>
+                            </div>
+
+                            <div class="feature" data-index="2">
+                                <h4>Multiunidades</h4>
+                                <p>Gerencie estoques de várias filiais com permissões por usuário e sincronização
+                                    centralizada.</p>
+                            </div>
+
+                            <div class="feature" data-index="3">
+                                <h4>Histórico de Movimentações</h4>
+                                <p>Auditoria completa das operações, com filtros por data, usuário e tipo de
+                                    movimentação.</p>
+                            </div>
+
+                            <div class="feature" data-index="4">
+                                <h4>Integração com Fornecedores</h4>
+                                <p>Envie pedidos automáticos e acompanhe prazos sem sair do sistema.</p>
+                            </div>
+
+                            <div class="feature" data-index="5">
+                                <h4>Leitura de Código</h4>
+                                <p>Compatível com leitores de código de barras e QR codes para entradas/saídas rápidas.
+                                </p>
+                            </div>
+
+                            <div class="feature" data-index="6">
+                                <h4>Relatórios Personalizados</h4>
+                                <p>Gere relatórios em PDF/CSV com métricas específicas para tomada de decisão.</p>
+                            </div>
+
+                            <div class="feature" data-index="7">
+                                <h4>Controle de Lotes e Validades</h4>
+                                <p>Gerencie lotes e datas de validade para reduzir perdas por vencimento.</p>
+                            </div>
+                        </div>
+
+                        <!-- Botão de ação -->
+                        <a href="#" style="margin-top: 30px;" class="btn btn--pill btn--gradient info-card__cta">Ver
+                            detalhes</a>
+                    </div>
+
+                    <!-- Botão próximo -->
+                    <button class="features__nav features__nav--next" aria-label="Próxima funcionalidade">›</button>
+                </div>
+            </div>
+            <!-- FIM div principal da fluxar -->
+        </section>
+        <!-- FIM section produto -->
+
+        <!-- Section acima do footer cod:topFooter -->
+        <section class="topFooter">
+            <!-- Ticker das funcionalidades cod:sectionNegociosPassando -->
+            <section aria-hidden="false" class="container" id="containerFooter">
+                <!-- faixa superior: direita -> esquerda -->
+                <div class="marquee" style="--marquee-speed:10s;">
+                    <div class="track">
+                        <span class="pill item"><img src="img/icones/alerta.png" alt="" aria-hidden="true"> Alertas
+                            Inteligentes</span>
+                        <span class="pill item"><img src="img/icones/dashboard.png" alt="" aria-hidden="true"> Dashboard
+                            em
+                            Tempo Real</span>
+                        <span class="pill item"><img src="img/icones/multi.png" alt="" aria-hidden="true">
+                            Multiunidades</span>
+                        <span class="pill item"><img src="img/icones/historico.png" alt="" aria-hidden="true"> Histórico
+                            de
+                            Movimentações</span>
+                    </div>
+                </div>
+                <!-- faixa inferior: esquerda -> direita (reverse) -->
+                <div class="marquee reverse" style="--marquee-speed:10s;">
+                    <div class="track">
+                        <span class="pill item"><img src="img/icones/fornecedor.png" alt="" aria-hidden="true">
+                            Integração
+                            com Fornecedores</span>
+                        <span class="pill item"><img src="img/icones/codigo.png" alt="" aria-hidden="true"> Leitura de
+                            Código</span>
+                        <span class="pill item"><img src="img/icones/relatorio.png" alt="" aria-hidden="true">
+                            Relatórios
+                            Personalizados</span>
+                        <span class="pill item"><img src="img/icones/lote.png" alt="" aria-hidden="true"> Controle de
+                            Lotes e
+                            Validades</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Fim ticker -->
+
+            <!-- div img com botão fluxar cod:imgPraChamarAtenção-->
+            <div class="estoque-box">
+                <h1>Potencialize a gestão do seu estoque</h1>
+                <ul>
+                    <li>✔ Gerencie suas indústrias sem burocracia — tudo em tempo real</li>
+                    <li>✔ Acesse e controle seu estoque de qualquer dispositivo</li>
+                    <li>✔ Mantenha seus dados seguros com criptografia de nível empresarial</li>
+                </ul>
+                <button class="btn-estoque">Comece Gratuitamente</button>
+                <div class="imgs-estoque">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Fim section top footer -->
+    </main>
+    <!-- FIM main -->
+
+    <!-- FOOTER cod:footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+
+            <!-- Links de navegação principais cod:listaItensFinal -->
+            <ul class="footer__menu">
+                <li class="footer__menu-title">
+                    <a href="#">Produto</a>
+                    <ol class="footer__submenu">
+                        <li><a href="">Fluxar</a></li>
+                    </ol>
+                </li>
+                <li class="footer__menu-title">
+                    <a href="#">Recursos</a>
+                    <ol class="footer__submenu">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Guias</a></li>
+                        <li><a href="">Ajuda</a></li>
+                    </ol>
+                </li>
+                <li class="footer__menu-title">
+                    <a href="#">Compania</a>
+                    <ol class="footer__submenu">
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Carreiras</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ol>
+                </li>
+            </ul>
+
+            <!-- Links secundários cod:termosPoliticas-->
+            <div class="footer__policies">
+                <a href="#">Politica de Privacidade</a>
+                <a href="#">Termos e Condições</a>
+            </div>
+
+            <!-- Ícones sociais cod:midia -->
+            <div class="footer__socials">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <!-- Copyright -->
+            <small>
+                &copy; <span id="year"></span> NeoTech Inc. Todos os Direitos Reservados.
+            </small>
+        </div>
+    </footer>
+    <!-- FIM FOOTER -->
+
+    <!-- JS externo -->
+    <script src="/scripts/app.js"></script>
+    <!-- FIM JS externo -->
+</body>
+
+</html>
